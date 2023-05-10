@@ -4,10 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página web</title>
+    <title>FECR</title>
 </head>
 <body>
-    <img src="fotoDePerfil.jpg" alt="Imagen_del_autor">
-    <p>Franyerson Enrique Contreras Ramirez</p>
+    <!--Menú de navegación-->
+    <header>
+        <nav>
+            <h1>Franyerson Enrique Contreras Ramirez</h1>
+            <ul>
+                <li><a href="#quienSoy">¿Quien soy?</a></li>
+                <li><a href="#habilidadesTecnicas">Habilidades Técnicas</a></li>
+                <li><a href="#habilidadesEmocionales">Habilidades emocionales</a></li>
+                <li><a href="#expectativas">Mis expectativas</a></li>
+                <li><a href="pasatiempos">Pasatiempos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <figure>
+        <img src="fotoDePerfil.jpg" alt="Imagen_del_autor" style="width: 200px;">
+        <figcaption>Este soy yo</figcaption>
+    </figure>
+    <!--Perfil-->
+    <hr>
+    <main id="quienSoy">
+        <h2>¿Quien soy?</h2>
+        <p>Soy colombo-venezolano, estudie derecho en Venezuela, convalidé estudios en Colombia. Tengo 28 años y vivo en Bogotá</p>
+    </main>
+    <hr>
+    <!--Habilidades-->
+    <section>
+        <article id="habilidadesTecnicas">
+            <h2>Mis habilidades técnicas</h2>
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Bootstrap</li>
+            </ol>
+        </article>
+        <hr>
+        <article id="habilidadesEmocionales">
+            <h2>Mis habilidades emocionales</h2>
+            <ul>
+                <li>Creatividad</li>
+                <li>Innovación</li>
+                <li>Adaptación al cambio</li>
+            </ul>
+        </article>
+    </section>
+    <hr>
+    <!--Expectativas-->
+    <section id="expectativas">
+        <h2>Mis expectativas de aprendizaje a corto plazo</h2>
+        <dl>
+            <dt><strong>REACT</strong></dt>
+            <dd>Me gustaría aprender sobre este framework necesario para tener mejor desenvolvimiento desde el mundo frontend</dd>
+            <dt><strong>Bases de datos</strong></dt>
+            <dd>Es importante amplicar conomientos de bases de datos relacionales y no relacioonales para conocer más del mundo backend</dd>
+        </dl>
+    </section>
+    <hr>
+    <!--Pasatiempos-->
+    <section id="pasatiempos">
+        <h2>Pasatiemos</h2>
+        <ul>
+            <li>Escuchar música</li>
+            <li>Ver series</li>
+            <li>Pasear en bici</li>
+            <li>Compartir con mi familia</li>
+        </ul>
+    </section>
+    <hr>
+    <!--footer-->
+    <footer id="contacto">
+        <h2>Contacto</h2>
+        <a href="#">Instragram</a>
+        <a href="#">GitHub</a>
+        <a href="#">Linkedin</a>
+        <a href="#">Twitter</a>
+    </footer>
 </body>
 </html>
