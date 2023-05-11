@@ -1,0 +1,25 @@
+body{
+    background-color: #D8DBFE;
+}
+header {
+    background-color: #C4C7E8;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+h1{
+    font-size: 50px;
+}
+
+#opcionesMenu{
+    align-self: end;
+    justify-self: end;
+    margin-left: 0;
+}
+h2{
+    background-color: #BCBFE1;
+    padding: 15px 12px 15px 9px;
+}
