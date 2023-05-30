@@ -2,24 +2,355 @@ body{
     background-color: #D8DBFE;
 }
 header {
-    background-color: #C4C7E8;
+    background-color: #BCBFE1;
 }
 
-nav {
+h1{
+    font-size: 30px;
+    color: black;
+    font-variant: small-caps;
+}
+
+#opcionesMenu{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    background-color: #BCBFE1;
+    padding: 15px 12px 15px 9px;
+    font-variant: small-caps;
+}
+
+.respmenu img {
+    width: 100px;
+    padding-top: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.respmenu a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    max-width: 100%;
+    background: #BCBFE1;
+    font-variant: small-caps;
+    text-shadow: 1px 1px black;
+    margin: 0;
+}
+
+.respmenu input[type="checkbox"], .respmenu .fa-bars, .respmenu .fa-times {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+}
+  
+.respmenu .fa-bars, .respmenu .fa-times {
+    font-size: 48px;
+    pointer-events: none;
+}
+  
+.respmenu input[type="checkbox"] {
+    opacity: 0;
+}
+  
+.respmenu {
+    color: white;
+    position: relative;
+    background: #BCBFE1;
+    min-height: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.respmenu nav {
+    display: none;
+}
+.respmenu input:checked ~ nav {
+    display: flex;
+    justify-content: start;
+}
+  
+.respmenu input:checked ~ .fa-bars {
+    display: none;
+}
+  
+.respmenu input:not(:checked) ~ .fa-times {
+    display: none;
+}
+
+.menu-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999;
+    color: black;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.menu-icon::before {
+    content: "\2630";
+}
+
+#menu {
+    width: 54vh;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    transition: right 0.3s ease;
+}
+
+#menu-toggle:checked + .menu {
+    right: 0;
+}
+
+#descripcion, #habtec, #habEmo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#descripcion img{
+    height: 70px;
+    width: 80px;
+    margin: 10px;
+}
+
+#listaPasatiempos {
+    display: flex;
+    justify-content: center;
+}
+
+#banderas, #divContact {
     display: flex;
     flex-direction: row;
 }
 
-h1{
-    font-size: 50px;
+p{
+    font-variant: small-caps;
 }
 
-#opcionesMenu{
-    align-self: end;
-    justify-self: end;
-    margin-left: 0;
+ol, dd, dt, ul{
+    padding: 0;
+    font-variant: small-caps;
 }
-h2{
-    background-color: #BCBFE1;
-    padding: 15px 12px 15px 9px;
+
+#divContact {
+    justify-content: space-evenly;
 }
+
+#divContact img{
+    width: 40px;
+}
+
+#contacto {
+    background-color: #6e7081;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 0;
+}
+
+#contacto h2 {
+    background-color: #6e7081;
+    justify-self: center;
+    align-self: center;
+}
+
+@media (min-width: 768px) {
+    .respmenu img {
+        width: 350px;
+        padding-top: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        height: 350px;
+        border-radius: 50%;
+    }
+
+    h1{
+        font-size: 90px;
+        color: black;
+        font-variant: small-caps;
+        text-shadow: 1px 1px white;
+    }
+    
+    .respmenu a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        padding: 10px 20px;
+        max-width: 100%;
+        background: #BCBFE1;
+        font-variant: small-caps;
+        font-size: 30px;
+        text-shadow: 1px 1px #6e7081;
+        margin: 0;
+    }
+
+    .menu-icon, #menu-toggle, .respmenu .fas {
+        display: none;
+    }
+    
+    .menu-icon {
+        z-index: 0;
+    } 
+    
+    #menu {
+        display:flex;
+        width: 60vh;
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+
+    #opcionesMenu{
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        list-style: none;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+    }
+    h2 {
+        font-size: 50px;
+    }
+    
+    #descripcion, #habtec, #habEmo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #descripcion img{
+        height: 200px;
+        width: 300px;
+        margin: 10px;
+    }
+    
+    #listaPasatiempos {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #banderas, #divContact {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    p{
+        font-variant: small-caps;
+        font-size: 40px;
+        padding: 30px;
+    }
+    
+    ol, dd, dt, ul{
+        padding: 30px;
+        font-size: 40px;
+        font-variant: small-caps;
+    }
+    
+    #divContact {
+        justify-content: space-evenly;
+    }
+    
+    #divContact img{
+        width: 100px;
+    }
+    
+    #contacto {
+        background-color: #6e7081;
+        display: flex;
+        flex-direction: column;
+        padding: 45px;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    h2 {
+      text-align: center;
+      font-size: 100px;
+    }
+    h1{
+        font-size: 150px;
+        justify-content: end;
+    }
+    .respmenu {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 800px;
+    }
+    .respmenu img {
+        width: 600px;
+        padding-top: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        height: 600px;
+        border-radius: 50%;
+    }
+    #opcionesMenu{
+        display: flex;
+        align-items: end;
+        width: 300px;
+        height: 100%;
+        padding: 15px;
+    }
+    #menu{
+        width: 300px;
+    }
+    .respmenu a {
+        padding: 10px 20px;
+        width: 300px;
+        background: #BCBFE1;
+        font-size: 50px;
+        text-shadow: 1px 1px black;
+        margin: 0;
+    }
+    p, ol, dd, dt, ul{
+        padding: 80px;
+        font-size: 60px;
+        font-variant: small-caps;
+    }
+    #descripcion img{
+        height: 700px;
+        width: 900px;
+        margin: 30px;
+    }
+    
+    #contacto {
+
+        padding: 100px;
+        margin: 0;
+    }
+    #divContact img{
+        width: 200px;
+    }
+  }
+ 
